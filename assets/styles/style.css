@@ -1,0 +1,458 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+--primaryColor: #666;
+--secondaryColor: #e7e7e7;
+--inverseColor: #888;
+--hoverColor: #ddd;
+--green: #04AA6D;
+--red: #E64E4E;
+}
+
+body{
+	font-size:1.3rem;
+width: 100vw;
+height: 100vh;
+padding: 1rem;
+color: var(--primaryColor);
+overflow-x:hidden;
+background-color: #eed6bb
+
+/*
+position: relative;
+left:-18px;
+*/
+}
+
+header{
+width: 100%;
+height: clamp(50px, 10vh, 100px);
+height: 4.5rem;
+margin: 1rem 0;
+}
+/*
+header:after{
+content: "";
+display: block;
+width: 30%;
+border-bottom: 5px dotted var(--inverseColor);
+position: absolute;
+left: 35%;
+}
+*/
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+}
+
+.header-img {
+  width: 90px;
+  height: 90px;
+  background: url('../pic/shai.png');
+  background-size: cover;
+  border: 5px solid #222;
+  border-radius: 60%;
+  margin: 0 2rem;
+  justify-content: right:
+}
+@font-face {
+  font-family: "Daniel Davis";
+  src: url("../fonts/Daniel Davis.ttf") format("truetype");
+}
+
+.header-name{
+font-family: 'Daniel Davis', cursive;
+font-size: 6rem;
+}
+
+
+/*
+	*navbar
+	*/
+nav {
+height: clamp(25px, 3.5rem, 50px);
+display: flex;
+justify-content: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+  width: max-content;
+
+  list-style-type: none;
+  
+  border-bottom: 1px solid var(--secondaryColor);
+ /* background-color: #f3f3f3;*/
+}
+
+
+
+nav li a {
+display: flex;
+justify-content: center;
+align-items: center;
+  color: var(--primaryColor);
+  width: 100%;
+  height: 100%;
+
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+/*
+  background-color: var(--hoverColor);
+*/
+  padding-top: 0.2rem;
+  transition: padding 0.5s;
+}
+
+nav li a.active {
+/*  color: white;
+  background-color: var(--inverseColor);
+*/
+  border-bottom: 2px solid var(--inverseColor);
+}
+
+
+/*
+	*section
+	*form
+	*/
+
+section{
+padding: 2rem;
+}
+.title{
+font-size: 2.5rem;
+text-align: center;
+}
+.formContainer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+}
+.field{
+margin: 5px;
+}
+.field.name{
+display: flex;
+}
+.field.name input:first-child{
+margin: 0 5px 0 0;
+}
+
+.field input, .field textarea{
+border: 1px solid var(--secondaryColor);
+padding: 10px;
+width: 100%;
+}
+.field textarea{
+resize: vertical;
+}
+
+.btn {
+  background-color: var(--primaryColor);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.formBtn {
+  background-color: #fff;
+  color: var(--primaryColor);
+  border: 2px solid var(--inverseColor);
+}
+
+.formBtn:hover {
+  background-color: var(--inverseColor);
+  color: #fff;
+}
+
+form .field .invalid{
+  border:1px solid var(--red);
+	box-shadow: 0 0 2px var(--red);
+}
+form .field .valid{
+  border:1px solid var(--green);
+box-shadow: 0 0 2px var(--green);
+}
+
+.errorMsg{
+	color: var(--red);
+	visibility: hidden;
+}
+
+/*
+	*section
+	*education
+	*/
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+}
+
+.card {
+    flex: 0 1 auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+box-shadow: 3px 5px 1px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  width: 40%;
+min-width:200px;
+  border-radius: 15px;
+margin: 1rem;
+border: 1px solid var(--inverseColor);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.details{
+  padding: 1.2rem 1rem;
+}
+.details h4{
+font-size: 1.3rem;
+padding: 0.3rem 0 ;
+}
+.details p{
+font-size: 1rem;
+padding: 0.3rem 0 ;
+}
+.details time{
+font-size: 0.8rem;
+}
+
+/*
+	*section
+	*aboutMe
+	*/
+
+.aboutMe .container{
+	flex-direction:column;
+}
+.aboutMe img{
+height: 250px;
+border-radius: 0 35% 0 35%;
+}
+.aboutMe .details{
+padding: 1rem 10rem;
+}
+
+/*
+	*section
+	*showcase
+	*/
+
+.showcase ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+}
+
+.showcase li{
+	height: 40vh;
+	flex-grow: 1;
+}
+
+.showcase img{
+	max-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+	vertical-align: bottom;
+}
+
+/*
+	*section
+	*gaming
+	*/
+.gaming .container{
+flex-direction: column;
+}
+
+.gaming .row .title{
+font-size: 1.5rem;
+margin: 1rem 0;
+}
+.gaming .row .content{
+	font-size: 1rem;
+	margin: 0 0 2rem 0;
+}
+	
+.gaming video{
+	border-radius: 1rem;
+	aspect-ratio: 16/9;
+}
+
+.line{
+	width: 100%;
+	margin: 1.5rem 0;
+	border: 1px solid var(--hoverColor);
+}
+
+.gaming .row .stunt-div{
+position: relative;
+display: flex;
+justify-content: center;
+}
+
+.gaming .row .stunt{
+font-size: 5.5rem;
+position: absolute;
+top: -2.5rem;
+color: var(--purple);
+font-family: 'Daniel Davis', cursive;
+}
+
+/*
+	*section
+	*travel & music
+	*/
+.travel .container,
+.music .container{
+flex-direction:column;
+}
+.travel .container .title,
+.music .container .title{
+text-align: left;
+}
+
+.travel .card,
+.music .card{
+	width: 40%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.travel .row .title,
+.music .row .title{
+font-size: 1.5rem;
+margin: 1rem 0;
+}
+
+.travel .card img,
+.music .card img{
+	width: 100%;
+}
+
+/*
+	*section
+	*music
+	*/
+audio{
+display:none;
+}
+.music .card{
+
+	height: auto;
+	max-width:250px;
+	position: relative;
+}
+
+.music .card img{
+	width: 100%;
+	height: 100%;
+}
+.music .control{
+	position: absolute;
+	top: 0;
+	color: #fff;
+	padding: 1rem;
+	background: #66666686;
+	cursor: pointer;
+}
+
+/*
+	*section
+	*main
+	*/
+/*
+	*for vertical view
+	*/
+/*
+.aboutMe .container{
+flex-direction:row;
+padding: 1rem 0;
+}
+
+.aboutMe .details{
+	padding: 0;
+margin: 0 0 0 3rem;
+}
+.aboutMe img{
+height: 100%;
+}
+.aboutMe .row img{
+width:100%;
+}
+*/
+@media only screen and (max-width: 768px) {
+section{
+margin: 0;
+}
+
+.header-name{
+font-size: 3rem;
+}
+nav ul{
+overflow-x: scroll;
+}
+
+.gaming .row .content{
+	padding: 0 3rem;
+}
+}
+
+/*
+	*footer
+	*/
+
+.footer{
+width: 100%;
+height: clamp(50px, 10vh, 100px);
+height: 4.5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+filter: grayscale(1);
+
+background: var(--hoverColor);
+
+border-radius: 0 0 1rem 1rem;
+margin: 1rem 0;
+}
+
+/*
+	*just
+	*/
+body{
+display: flex;
+flex-direction: column;
+}
+
+/*
+section{
+flex: 1 1 auto;
+}
+*/
+/*
+header,nav,footer{
+flex: 0 1 auto;
+}
+*/

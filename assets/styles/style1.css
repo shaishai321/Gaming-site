@@ -1,0 +1,29 @@
+.aboutMe .container{
+flex-direction:row;
+}
+
+.aboutMe .imgBox {
+width:100%;
+}
+
+.aboutMe .imgContainer{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.aboutMe img{
+width:50%;
+height:auto;
+}
+
+.aboutMe .detailsBox{
+flex: 60%;
+}
+
+.aboutMe .detailsBox .details{
+padding:0;
+margin:0;
+}

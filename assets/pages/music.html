@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music</title>
+    <link rel="stylesheet" href="../styles/style.css">
+  </head>
+  <body>
+	<header>
+		<div class="container">
+			<div class="header-img"></div>
+			<div class="column header-name">
+				Love for Music 
+			</div>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			  <li><a href="../../index.html">Home</a></li>
+			<li><a href="./matches.html">Matches</a></li>
+			  <li><a href="./teams.html">Teams</a></li>
+  <li><a href="./showcase.html">Showcase</a></li>
+  <li><a href="./gaming.html">Gaming</a></li>
+			 <li><a class="active" href="./music.html">Music</a></li>
+				<li><a href="./about.html">About Us</a></li>
+			  <li><a href="./contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	<section class="music">
+		<div class="title">
+		<i> Music </i>
+		</div>
+		<div class="container">
+		<div class="row">
+				<p class="title"><i>All-Time Favourites</i></p>
+				<div class="cards">
+		<div class="card">
+			<img src="../pic/wiz1.jpg" />
+			<div class="control">Play</div>
+			 <audio controls autoplay>
+				<source src="../audio/wiz1.mpeg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio> 
+		</div>
+		<div class="card">
+			<img src="../pic/animals.jpg" />
+			<div class="control">Play</div>
+			 <audio controls>
+				<source src="../audio/animals.mpeg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio> 
+		</div>
+		<div class="card">
+			<img src="../pic/low.jpg" />
+			<div class="control">Play</div>
+			 <audio controls>
+				<source src="../audio/low.mpeg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio> 
+		</div>
+		</div>
+	</div>
+
+<div class="line"></div>
+<div class="row">
+				<p class="title"><i>The Current Favourites</i></p>
+				<div class="cards">
+		<div class="card">
+			<img src="../pic/laure.jpg" />
+			<div class="control">Play</div>
+			 <audio controls autoplay>
+				<source src="../audio/laure.mpeg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio> 
+		</div>
+		<div class="card">
+			<img src="../pic/begg.jpg" />
+			<div class="control">Play</div>
+			 <audio controls>
+				<source src="../audio/beggin.mpeg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio> 
+		</div>
+		<div class="card">
+			<img src="../pic/work.jpg" />
+			<div class="control">Play</div>
+			 <audio controls>
+				<source src="../audio/work.mpeg" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio> 
+		</div>
+		</div>
+	</div>
+
+	</div>
+	</section>
+		<footer>
+		<div class="footer">
+		<p>
+			&copy; Created with HTML. All Right Reserved &reg;.
+		</p>		
+		</div>
+	</footer>
+<script>
+	let playBtns = document.querySelectorAll(".control");
+	playBtns.forEach(playBtn=>{
+	playBtn.addEventListener("click", function(evt){
+		let audioElement = evt.target.parentNode.querySelector("audio");
+		if (audioElement.paused){
+			audioElement.play();
+			evt.target.textContent = "Pause";
+		}else{
+			audioElement.pause();
+			evt.target.textContent = "Play";
+		}
+},false);
+	
+});
+</script>
+  </body>
+</html>
